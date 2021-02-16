@@ -1,0 +1,33 @@
+footer {
+    background-color:#474747;
+    padding: 30px 20px 60px 20px;
+    color: white;
+    font-size: .8em;
+} 
+
+
+.footer-websiteLogo{
+    height: 23px;
+    margin-bottom: 15px;
+
+}
+
+.proFeature{
+    cursor: pointer;
+    margin-bottom: 5px;
+    span{
+        display: inline-block;
+        width: 20px;
+    }
+
+    &:hover{
+        color: $primarycolor;
+    }
+    
+    &__logo{
+        height: 13px;
+        margin-right: 5px;
+       
+    }
+    
+}

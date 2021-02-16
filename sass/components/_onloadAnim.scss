@@ -1,0 +1,19 @@
+.plat{
+    opacity: 0;
+}
+
+@keyframes onloadAnim{
+    0%{ transform: translateY(70px);
+        opacity: 0;
+        }
+    100%{
+        opacity: 1;
+    }
+}
+
+@for $i from 1 through 9{
+    .plat:nth-of-type(#{$i}) {
+        animation: onloadAnim .3s  ease-out 0s+$i/10;
+        animation-fill-mode: forwards;
+    }
+}

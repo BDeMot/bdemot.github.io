@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'roboto';
+    src: url('./fonts/Roboto-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "shrikhand";
+    src: url("./fonts/Shrikhand-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: roboto, sans-serif;
+    font-size: 1.3em;
+}
+
+h1, h2{
+font-size: 1.2em;
+}
+
+h3{
+    font-size: .9em;
+}
+
+h4{
+    font-size: .9em;
+    font-weight: lighter;
+}
+
+p{
+    font-size: .9em;
+}

@@ -1,0 +1,17 @@
+.heart-icon__svg{
+        width: 25px;
+        color: transparent;
+        stroke: black;
+        stroke-width: 20px;
+        overflow :visible;
+        cursor: pointer;
+        
+        &:hover{
+            color: $primarycolor;
+            stroke: $primarycolor;
+        }
+    
+}
+
+
+  

@@ -1,0 +1,20 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/fundations";
+@import "./base/fonts";
+
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/restaurant-page";
+
+
+@import "./components/heartIcon";
+@import "./components/left-arrow";
+@import "./components/hr";
+@import "./components/onloadAnim";
+
+@import "./pages/search";
+@import "./pages/steps";
+@import "./pages/restaurantsList";
+@import "./pages/loader";
