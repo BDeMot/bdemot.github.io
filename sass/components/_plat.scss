@@ -1,0 +1,51 @@
+
+
+.plat-name-desc{
+    
+    flex: 2;
+    margin: 10px;
+    width: 40%;
+}
+
+.plat{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    @include box-shadow;
+    margin: 10px 0 10px 0;
+    overflow: hidden;
+
+    &__desc{
+        font-size: .7em;
+        margin-top: 6px;
+    }
+    &--ellipsis{
+        @include ellipsis;
+    }
+
+    &__prix{
+        display: inline-block;
+        margin: 10px;
+        font-weight: bold;
+    }
+}
+
+.price-check{
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.check{
+    display: flex;
+    background-color: $tertiarycolor;
+    height: 70px; 
+    justify-content: center;
+
+    svg{
+        width: 23px;
+        color: white;
+    }
+}

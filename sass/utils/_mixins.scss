@@ -9,6 +9,14 @@
 @mixin padding{
     padding: 40px 20px 40px 20px;}
 
+
 @mixin box-shadow{
     box-shadow: 4px 4px 15px rgba(50, 50, 50, 0.2);
+}
+
+
+@mixin ellipsis{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }

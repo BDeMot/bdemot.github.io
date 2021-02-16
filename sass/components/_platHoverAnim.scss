@@ -1,0 +1,31 @@
+.check{
+    width: 0;
+    transition: width .5s;
+
+    svg{
+        transform : translateX(20px);
+        transition: transform .5s;
+    }
+}
+
+
+
+.plat:hover > .price-check > .check{
+    width: 65px;
+    & > svg{
+        transform: translateX(0);
+        animation: checknrotate .5s;
+    
+    }
+}
+
+
+@keyframes checknrotate{
+    from {
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
