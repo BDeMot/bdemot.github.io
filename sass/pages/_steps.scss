@@ -16,6 +16,9 @@
     font-weight: bold;
     font-size: .9em;
     margin: 0 0 30px 15px;
+    @include responsive (max, map-get($breakpoints, "smallmobile")){
+        font-size: .8em;
+    }
 
     .step-number{
         display: inline-block;
@@ -35,6 +38,11 @@
         opacity: .5;
         position: absolute;
         left: 65px;
+
+        @include responsive (max, map-get($breakpoints, "smallmobile")){
+            left: 55px;
+            height: 15px;
+        }
     }
     &:hover{
         background-color: rgba($primarycolor, .2);

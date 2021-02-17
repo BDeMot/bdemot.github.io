@@ -1,6 +1,8 @@
 .restaurant-page{
     width: 100%;
     overflow: hidden;
+    margin-bottom: 0;
+ 
 
     &__image{
         width: 100%;
@@ -10,11 +12,11 @@
 
 .menu{
     @include padding;
+
     border-radius: 40px 40px 0 0;
-    background-color: #F1F1F1;
     position: relative;
     top: -45px;
-
+    background-color: #F1F1F1;
     h1{
         font-family: shrikhand;
         display: inline-block;

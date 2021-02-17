@@ -1,5 +1,5 @@
-@mixin resDesktop{
-    @media all and (min-width: $breakpoints){
+@mixin responsive($min-max, $size){
+    @media all and ($min-max+-width: $size){
         @content;
     }
 }

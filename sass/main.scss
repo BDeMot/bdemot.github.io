@@ -1,7 +1,8 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/maps";
 
-@import "./base/fundations";
+@import "./base/resets";
 @import "./base/fonts";
 
 @import "./layouts/header";

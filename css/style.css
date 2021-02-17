@@ -8,6 +8,19 @@ ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: #9356dc;
+}
+
+a:hover, a:active {
+  outline: none;
+}
+
 @font-face {
   font-family: "roboto";
   src: url("./fonts/Roboto-Regular-webfont.woff") format("woff");
@@ -83,6 +96,7 @@ footer {
 .restaurant-page {
   width: 100%;
   overflow: hidden;
+  margin-bottom: 0;
 }
 .restaurant-page__image {
   width: 100%;
@@ -91,9 +105,9 @@ footer {
 .menu {
   padding: 40px 20px 40px 20px;
   border-radius: 40px 40px 0 0;
-  background-color: #F1F1F1;
   position: relative;
   top: -45px;
+  background-color: #F1F1F1;
 }
 .menu h1 {
   font-family: shrikhand;
@@ -342,6 +356,11 @@ hr {
   font-size: 0.9em;
   margin: 0 0 30px 15px;
 }
+@media all and (max-width: 360px) {
+  .step {
+    font-size: 0.8em;
+  }
+}
 .step .step-number {
   display: inline-block;
   width: 30px;
@@ -359,6 +378,12 @@ hr {
   opacity: 0.5;
   position: absolute;
   left: 65px;
+}
+@media all and (max-width: 360px) {
+  .step img {
+    left: 55px;
+    height: 15px;
+  }
 }
 .step:hover {
   background-color: rgba(147, 86, 220, 0.2);
