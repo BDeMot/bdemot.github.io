@@ -2,21 +2,48 @@
     width: 100%;
     overflow: hidden;
     margin-bottom: 0;
- 
+    background-color: #F1F1F1;
+    @include responsive(min, map-get($breakpoints, "bigscreen")){
+    background-color:#474747;
 
+    }
+    
     &__image{
         width: 100%;
+        @include responsive(min, map-get($breakpoints, "bigscreen")){
+            height: 1095px;
+            width: auto;
+        }
+        @include responsive(min, map-get($breakpoints, "hires")){
+            width: 100%;
+        }
     }
 }
 
+body{
+    @include responsive(min, map-get($breakpoints, "bigscreen")){
+    overflow: scroll;
+}
+    
+}
 
 .menu{
     @include padding;
-
+    padding-bottom: 0px;
     border-radius: 40px 40px 0 0;
     position: relative;
     top: -45px;
     background-color: #F1F1F1;
+
+    @include responsive(min, map-get($breakpoints, "bigscreen")){
+        padding-bottom: 40px;
+        width: 500px;
+        position: absolute;
+        top: 100px;
+        left: calc(50% - 500px / 2); //centrage absolu= positionnement abs. à left:50% et décalage moitié de la taille de l'élément
+        border-radius: 40px;
+    }
+
     h1{
         font-family: shrikhand;
         display: inline-block;

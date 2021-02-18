@@ -97,17 +97,51 @@ footer {
   width: 100%;
   overflow: hidden;
   margin-bottom: 0;
+  background-color: #F1F1F1;
+}
+@media all and (min-width: 540px) {
+  .restaurant-page {
+    background-color: #474747;
+  }
 }
 .restaurant-page__image {
   width: 100%;
 }
+@media all and (min-width: 540px) {
+  .restaurant-page__image {
+    height: 1095px;
+    width: auto;
+  }
+}
+@media all and (min-width: 1640px) {
+  .restaurant-page__image {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 540px) {
+  body {
+    overflow: scroll;
+  }
+}
 
 .menu {
   padding: 40px 20px 40px 20px;
+  padding-bottom: 0px;
   border-radius: 40px 40px 0 0;
   position: relative;
   top: -45px;
   background-color: #F1F1F1;
+}
+@media all and (min-width: 540px) {
+  .menu {
+    padding-bottom: 40px;
+    width: 500px;
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 500px / 2);
+    border-radius: 40px;
+  }
 }
 .menu h1 {
   font-family: shrikhand;
