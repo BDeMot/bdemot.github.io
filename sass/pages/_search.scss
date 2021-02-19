@@ -7,6 +7,10 @@
     font-family: roboto;
     font-size: .8em;
     font-weight: bold;
+    @include responsive(min, map-get($breakpoints, "desktop")){
+        border-radius: 0 0 15px 15px;
+        @include   box-shadow;
+    }
         &::placeholder{
         color: black;
         background-image: url("./svg/map-marker-alt-solid.svg");
@@ -14,6 +18,9 @@
         background-position: 23vw;
         background-size: 15px;
         opacity: .6;
+        @include responsive(min, map-get($breakpoints, "desktop")){
+            background-position: 13vw;
+        }
        
         }
 
@@ -31,25 +38,15 @@
    }
    &__text{
        opacity: .5;
+       @include responsive(min, map-get($breakpoints, "desktop")){
+           opacity: 1;
+       }
        
    }
-   &__button{
-       margin: 30px 0 30px 0;
-       border: none;
-       height: 60px;
-       border-radius: 60px;
-       background: linear-gradient($secondarycolor, $primarycolor);
-       font-family: roboto;
+   
+   @include responsive(min, map-get($breakpoints, "desktop")){
        color: white;
-       font-size: .8em;
-       padding: 0 20px 0 20px;
-       box-shadow: 4px 4px 8px rgba(50, 50, 50, 0.3);
-       transition: opacity .1s ease-in, box-shadow .1s ease-in; 
-       &:hover {
-          opacity:.7;
-          box-shadow: 4px 4px 10px rgba(40, 40, 40, 1)
-           
-       }
+       background-color: transparent;
    }
 }
 

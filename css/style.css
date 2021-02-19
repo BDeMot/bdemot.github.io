@@ -13,10 +13,6 @@ a {
   color: black;
 }
 
-a:visited {
-  color: #9356dc;
-}
-
 a:hover, a:active {
   outline: none;
 }
@@ -61,8 +57,10 @@ header {
   padding-top: 30px;
   padding-bottom: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  position: relative;
   z-index: 100;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 footer {
@@ -109,19 +107,14 @@ footer {
 }
 @media all and (min-width: 540px) {
   .restaurant-page__image {
-    height: 1095px;
+    height: 1195px;
     width: auto;
+    filter: blur(2px);
   }
 }
 @media all and (min-width: 1640px) {
   .restaurant-page__image {
     width: 100%;
-  }
-}
-
-@media all and (min-width: 540px) {
-  body {
-    overflow: scroll;
   }
 }
 
@@ -151,6 +144,13 @@ footer {
 }
 .menu h3 {
   font-weight: light;
+}
+.menu button {
+  text-align: center;
+  padding: 0 40px 0 40px;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
 }
 
 .nom-restaurant {
@@ -323,6 +323,24 @@ hr {
     transform: rotate(360deg);
   }
 }
+.bigButton {
+  margin: 30px 0 30px 0;
+  border: none;
+  height: 60px;
+  border-radius: 60px;
+  background: linear-gradient(#ff79d9, #9356dc);
+  font-family: roboto;
+  color: white;
+  font-size: 0.8em;
+  padding: 0 20px 0 20px;
+  box-shadow: 4px 4px 8px rgba(50, 50, 50, 0.3);
+  transition: opacity 0.1s ease-in, box-shadow 0.1s ease-in;
+}
+.bigButton:hover {
+  background: linear-gradient(#ff93e0, #a16be0);
+  box-shadow: 4px 4px 10px #282828;
+}
+
 .searchbar {
   border: none;
   background-color: #eae7e7;
@@ -333,6 +351,12 @@ hr {
   font-size: 0.8em;
   font-weight: bold;
 }
+@media all and (min-width: 700px) {
+  .searchbar {
+    border-radius: 0 0 15px 15px;
+    box-shadow: 4px 4px 15px rgba(50, 50, 50, 0.2);
+  }
+}
 .searchbar::placeholder {
   color: black;
   background-image: url("./svg/map-marker-alt-solid.svg");
@@ -340,6 +364,11 @@ hr {
   background-position: 23vw;
   background-size: 15px;
   opacity: 0.6;
+}
+@media all and (min-width: 700px) {
+  .searchbar::placeholder {
+    background-position: 13vw;
+  }
 }
 
 .explore {
@@ -353,22 +382,16 @@ hr {
 .explore__text {
   opacity: 0.5;
 }
-.explore__button {
-  margin: 30px 0 30px 0;
-  border: none;
-  height: 60px;
-  border-radius: 60px;
-  background: linear-gradient(#ff79d9, #9356dc);
-  font-family: roboto;
-  color: white;
-  font-size: 0.8em;
-  padding: 0 20px 0 20px;
-  box-shadow: 4px 4px 8px rgba(50, 50, 50, 0.3);
-  transition: opacity 0.1s ease-in, box-shadow 0.1s ease-in;
+@media all and (min-width: 700px) {
+  .explore__text {
+    opacity: 1;
+  }
 }
-.explore__button:hover {
-  opacity: 0.7;
-  box-shadow: 4px 4px 10px #282828;
+@media all and (min-width: 700px) {
+  .explore {
+    color: white;
+    background-color: transparent;
+  }
 }
 
 .fonctionnement {
@@ -428,8 +451,15 @@ hr {
 }
 
 .restaurantsList {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   padding: 40px 20px 40px 20px;
+}
+@media all and (min-width: 700px) {
+  .restaurantsList {
+    background-color: rgba(241, 241, 241, 0.8);
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(50, 50, 50, 0.2);
+  }
 }
 .restaurantsList h2 {
   margin-bottom: 30px;
@@ -480,6 +510,24 @@ hr {
   top: -40px;
 }
 
+@media all and (min-width: 700px) {
+  .desktop {
+    padding-bottom: 40px;
+    width: 700px;
+    height: 2165px;
+    position: relative;
+    left: calc(50% - 700px / 2);
+    border-radius: 40px;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .wrapperForBg {
+    background: linear-gradient(5deg, white 0 85.9%, rgba(255, 121, 217, 0.8) 86% 100%), url(./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: cover;
+  }
+}
+
 .containerLoader {
   position: absolute;
   top: 0;
@@ -493,6 +541,10 @@ hr {
   opacity: 0;
   transform: scale(0);
   z-index: 1000;
+}
+
+.bodyLoading {
+  animation: overflow linear 6s;
 }
 
 .loader {
@@ -557,6 +609,14 @@ hr {
   100% {
     opacity: 0;
     transform: scale(0);
+  }
+}
+@keyframes overflow {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: visible;
   }
 }
 

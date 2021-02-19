@@ -11,8 +11,12 @@
     opacity: 0;
     transform: scale(0);
     z-index: 1000;
-}
+  }
+
+.bodyLoading{
   
+  animation: overflow linear 6s;
+}
 
 .loader{
   display: block;
@@ -83,4 +87,14 @@
       opacity: 0;
       transform: scale(0);
     }
+}
+
+@keyframes overflow{
+  from{
+    overflow: hidden;
+  }
+
+  to{
+    overflow: visible;
+  }
 }

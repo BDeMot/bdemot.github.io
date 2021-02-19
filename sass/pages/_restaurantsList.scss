@@ -1,6 +1,13 @@
 .restaurantsList{
-    background-color: #F1F1F1;
+    background-color: #f1f1f1;
     @include padding;
+
+    @include responsive(min, map-get($breakpoints, "desktop")){
+        background-color: rgba(241, 241, 241, .8);
+        border-radius: 15px;
+        @include box-shadow;
+    }
+
 
     h2{
         margin-bottom: 30px;
@@ -62,3 +69,27 @@
     right: 30px;
     top: -40px;
 }
+
+.desktop{
+    @include responsive(min, map-get($breakpoints, "desktop")){
+        padding-bottom: 40px;
+        width: 700px;
+        height: 2165px;
+        position: relative;
+        left: calc(50% - 700px / 2); //centrage absolu= positionnement abs. à left:50% et décalage moitié de la taille de l'élément
+        border-radius: 40px;
+
+    }
+}
+
+
+.wrapperForBg{
+    @include responsive(min, map-get($breakpoints, "desktop")){
+    background: linear-gradient(5deg, white 0 85.9%, rgba(255, 121, 217, .8)86% 100%), url(./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: cover;
+    
+ }
+    
+}
+
+

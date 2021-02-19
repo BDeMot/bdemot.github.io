@@ -11,21 +11,18 @@
     &__image{
         width: 100%;
         @include responsive(min, map-get($breakpoints, "bigscreen")){
-            height: 1095px;
+            height: 1195px;
             width: auto;
+            filter: blur(2px);
+         
+            
         }
         @include responsive(min, map-get($breakpoints, "hires")){
             width: 100%;
         }
     }
 }
-
-body{
-    @include responsive(min, map-get($breakpoints, "bigscreen")){
-    overflow: scroll;
-}
-    
-}
+ 
 
 .menu{
     @include padding;
@@ -34,6 +31,7 @@ body{
     position: relative;
     top: -45px;
     background-color: #F1F1F1;
+    
 
     @include responsive(min, map-get($breakpoints, "bigscreen")){
         padding-bottom: 40px;
@@ -54,6 +52,15 @@ body{
     h3{
         font-weight: light;
     }
+
+    button{
+        text-align: center;
+        padding: 0 40px 0 40px;
+        display: block;
+       
+        margin: auto; 
+        margin-top: 30px;
+    }
 }
 
 
@@ -68,4 +75,5 @@ body{
     margin-top: 30px;
     margin-bottom: 4px;
 }
+
 
