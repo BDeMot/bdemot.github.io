@@ -18,5 +18,5 @@ a:hover, a:active{
 }
 
 body{
-    overflow-x: hidden;
+    overflow-x: hidden; //correction d'un bug sur Chrome qui fait apparaître une marge au changement de la taille de l'écran
 }
