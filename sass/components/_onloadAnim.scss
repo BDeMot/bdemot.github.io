@@ -11,7 +11,7 @@
     }
 }
 
-@for $i from 1 through 9{
+@for $i from 1 through 10{
     .plat:nth-of-type(#{$i}) {
         animation: onloadAnim .3s  ease-out 0s+$i/10;
         animation-fill-mode: forwards;
