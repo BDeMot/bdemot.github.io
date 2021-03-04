@@ -532,7 +532,7 @@ hr {
 
 @media all and (min-width: 700px) {
   .wrapperForBg {
-    background: linear-gradient(5deg, white 0 85.9%, rgba(255, 121, 217, 0.8) 86% 100%), url(./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background: linear-gradient(5deg, white 85.9%, rgba(255, 121, 217, 0.8) 86%), url(./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     background-size: cover;
   }
 }
